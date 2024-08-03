@@ -62,12 +62,30 @@ h1 {
   margin: 16px;
   text-align: center;
   align-content: center;
+  font-weight: bold;
 }
 
-
+.content{
+  margin: 8px;
+  padding-left: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
 .bookTile {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
   width: 25%;
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px;
+  padding: 16px;
+  width: 360px;
+  height: 300px;
+  font-size: 24px;
+  box-shadow: 0px 0px 31px 8px rgba(0,0,0,0.28);
+
 }
+
