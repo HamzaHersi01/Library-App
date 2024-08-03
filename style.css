@@ -173,11 +173,33 @@ cursor: pointer;
 
 
 .addBookModal form{
-  background-color: grey;
+  padding: 16px;
+  background-color: rgb(226, 226, 226);
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
+  width: 300px;
+  height: 400px;
+}
 
+.addBookModal form p{
+  font-size:24px ;
+  font-weight: bolder;
+  margin-bottom: 8px;
+}
+
+.addBookModal form input{
+  width: 75%;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  padding-left: 12px;
+  border:1px solid rgb(226, 226, 226);
+}
+
+.addBookModal form #submit{
+  background-color: greenyellow;
+  cursor: pointer;
 }
