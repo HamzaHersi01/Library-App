@@ -19,18 +19,20 @@ body {
 }
 
 .header {
-  display: flex; /* Add this line to enable flexbox */
+  display: flex;
   width: 100%;
   height: 100px;
   background-color: white;
   box-shadow: 0px 3px 1px 1px rgba(0,0,0,0.1);
+  flex-wrap: nowrap;
+  padding: 0 20px;
+  justify-content: space-around;
 }
 
 h1 {
   text-align: center;
   align-self: center;
-  justify-content: flex-start;
-  margin-left: 300px;
+  margin-right: 16px;
 }
 
 .logInButton {
@@ -43,8 +45,21 @@ h1 {
   align-items: center;
   justify-content: center;
   display: flex;
-  margin-left: auto; /* Add this line to push the button to the end of the row */
-  margin-right: 300px;
+  cursor: pointer;
+}
+
+:hover.logInButton {
+  background-color: rgb(83, 83, 83);
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  width: 80px;
+  height: 50px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
 }
 
 .addBook{
@@ -53,6 +68,7 @@ h1 {
   justify-content: center;
   font-size: 24px;
 }
+
 
 .addBookButton{
   border-radius: 8px;
@@ -63,14 +79,28 @@ h1 {
   text-align: center;
   align-content: center;
   font-weight: bold;
+  cursor: pointer;
+}
+
+:hover.addBookButton{
+  border-radius: 8px;
+  width: 150px;
+  height: 60px;
+  background-color: rgb(83, 83, 83);
+  color: white;
+  margin: 16px;
+  text-align: center;
+  align-content: center;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .content{
   margin: 8px;
-  padding-left: 350px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .bookTile {
@@ -95,7 +125,17 @@ width: 85%;
 text-align: center;
 border-radius: 8px;
 font-weight: bold;
+cursor: pointer;
 }
+
+:hover.remove{
+  background-color: rgb(194, 145, 145);
+  width: 85%;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  }
 
 .read{
   background-color: greenyellow;
@@ -103,4 +143,31 @@ font-weight: bold;
   text-align: center;
   border-radius: 8px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+:hover.read{
+  background-color: rgb(104, 153, 31);
+  width: 85%;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  h1 {
+    margin: 10px 0;
+  }
+
+  .logInButton {
+    margin: 10px 0;
+    width: auto;
+  }
 }
