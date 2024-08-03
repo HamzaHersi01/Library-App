@@ -21,24 +21,19 @@ modalBackground.addEventListener("click", function(event) {
 form.addEventListener("submit",function(e){
 e.preventDefault();
 const title = form.title.value
+form.title.value = ""
 const author = form.author.value
+form.author.value = ""
 const pages = form.pages.value
+form.pages.value = ""
 const read = form.read.value
+console.log(read)
 addBookToLibrary(new Book(title,author,pages,read))
 populateTile(new Book(title,author,pages,read))
 modalBackground.classList.add('hidden');
 })
 
 
-
-
-function bookTileRender(){
-//var tiles = document.getElementsByClassName("bookTile")
-//while(tiles[0]){
-  //tiles[0].parentNode.removeChild(tiles[0])
-//}
-
-}
 
 function populateTile(book){
   //TODO Title, Author, Pages, Read, Remove
@@ -48,27 +43,26 @@ function populateTile(book){
   const title = document.createElement("div")
   title.classList.add("title")
   title.textContent = book.title
-  
+  bookTile.appendChild(title)
+
   const author = document.createElement("div")
   author.classList.add("author")
   author.textContent = book.author
+  bookTile.appendChild(author)
 
   const pages = document.createElement("div")
   pages.classList.add("pages")
   pages.textContent = book.pages
+  bookTile.appendChild(pages)
 
   const read = document.createElement("div")
   read.classList.add("read")
   read.textContent = "Read"
+  bookTile.appendChild(read)
 
   const remove = document.createElement("div")
   remove.classList.add("remove")
   remove.textContent = "Remove"
-
-  bookTile.appendChild(title)
-  bookTile.appendChild(author)
-  bookTile.appendChild(pages)
-  bookTile.appendChild(read)
   bookTile.appendChild(remove)
 
   content.appendChild(bookTile)
