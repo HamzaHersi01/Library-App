@@ -99,10 +99,13 @@ h1 {
 
 .content{
   margin: 8px;
+  padding-left: 250px;
+  padding-right: 250px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  justify-self: center;
 }
 
 .bookTile {
@@ -225,4 +228,24 @@ cursor: pointer;
 :hover.submit{
   background-color: rgb(104, 153, 31);
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .bookTile {
+    flex-grow: 1; 
+  }
+
+  .content{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
 }
