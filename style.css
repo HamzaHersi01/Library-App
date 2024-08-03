@@ -57,7 +57,7 @@ h1 {
 .addBookButton{
   border-radius: 8px;
   width: 150px;
-  height: 75px;
+  height: 60px;
   background-color: white;
   margin: 16px;
   text-align: center;
@@ -74,6 +74,7 @@ h1 {
 }
 
 .bookTile {
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -88,4 +89,18 @@ h1 {
   box-shadow: 0px 0px 31px 8px rgba(0,0,0,0.28);
 
 }
+.remove{
+background-color: rgb(253, 189, 189);
+width: 85%;
+text-align: center;
+border-radius: 8px;
+font-weight: bold;
+}
 
+.read{
+  background-color: greenyellow;
+  width: 85%;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
