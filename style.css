@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex; /* Add this line to enable flexbox */
+  width: 100%;
+  height: 100px;
+  background-color: blue;
+}
+
+h1 {
+  background-color: pink;
+  text-align: center;
+  align-self: center;
+  justify-content: flex-start;
+  margin-left: 300px;
+}
+
+.logInButton {
+  background-color: green;
+  width: 75px;
+  height: 50px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: auto; /* Add this line to push the button to the end of the row */
+  margin-right: 300px;
+}
+
+
+.bookTile {
+  background-color: red;
+  width: 25%;
+  text-align: center;
+}
