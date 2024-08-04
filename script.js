@@ -68,28 +68,6 @@ function populateTile(book){
   content.appendChild(bookTile)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function Book(title,author,pages,read) {
   // the constructor...
   this.title = title
