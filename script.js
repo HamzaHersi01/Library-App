@@ -20,20 +20,32 @@ modalBackground.addEventListener("click", function(event) {
 
 form.addEventListener("submit",function(e){
 e.preventDefault();
+
 const title = form.title.value
-form.title.value = ""
 const author = form.author.value
-form.author.value = ""
 const pages = form.pages.value
-form.pages.value = ""
 const read = form.read.value
-console.log(read)
-addBookToLibrary(new Book(title,author,pages,read))
-populateTile(new Book(title,author,pages,read))
-modalBackground.classList.add('hidden');
+validate_input(form)
+
 })
 
+function validate_input(form){
+  if(title==="" || author==="" ||pages ===""|| read==="" ){
+    alert("Fill all elements of the form")
+  }
+  else{
+    wipe_form(form)
+    addBookToLibrary(new Book(title,author,pages,read))
+    populateTile(new Book(title,author,pages,read))
+    modalBackground.classList.add('hidden');
+    }
+}
 
+function wipe_form(form){
+  form.title.value = ""
+  form.author.value = ""
+  form.pages.value = ""
+}
 
 function populateTile(book){
   //TODO Title, Author, Pages, Read, Remove
