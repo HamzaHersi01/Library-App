@@ -3,6 +3,7 @@ const addBookbtn = document.querySelector(".addBookButton")
 const modalBackground = document.querySelector(".addBookModal")
 const form = document.querySelector("#bookinfo")
 const content = document.querySelector(".content")
+const removeBtn = document.getElementsByClassName("remove")
 console.log(form)
 
 const myLibrary = [];
@@ -20,16 +21,16 @@ modalBackground.addEventListener("click", function(event) {
 
 form.addEventListener("submit",function(e){
 e.preventDefault();
-
-const title = form.title.value
-const author = form.author.value
-const pages = form.pages.value
-const read = form.read.value
 validate_input(form)
 
 })
 
+
 function validate_input(form){
+const title = form.title.value
+const author = form.author.value
+const pages = form.pages.value
+const read = form.read.value
   if(title==="" || author==="" ||pages ===""|| read==="" ){
     alert("Fill all elements of the form")
   }
@@ -76,6 +77,10 @@ function populateTile(book){
   remove.classList.add("remove")
   remove.textContent = "Remove"
   bookTile.appendChild(remove)
+  remove.addEventListener("click",function(){
+    remove.parentNode.remove();
+  })
+
 
   content.appendChild(bookTile)
 }
